@@ -1,0 +1,131 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Righteous&display=swap');
+main{
+    min-height: 100vh;
+    background: rgb(61,136,238);
+    background: linear-gradient(50deg, rgba(61,136,238,1) 20%, rgba(3,36,112,1) 70%); 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5rem;
+    .window {
+        width: 800px;
+        background:white;
+        background: linear-gradient(to right bottom, rgba(255,255,255,0.7),
+        rgba(255,255,255,0.3));
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        .title{
+            width: 100%;
+            text-align: center;
+            font-size: 3.5rem;
+            font-family: 'Righteous', cursive;
+            border-bottom: 2px solid black;
+        }
+        .controls{
+            width: 100%;
+            display: flex;
+            padding: 2rem 1rem;
+            border-bottom: 2px solid black;
+            .input{
+                flex: 2;
+                display: flex;
+                justify-content: center;
+                input{
+                    font-size: 1.5rem;
+                    height: 100%;
+                }
+                button{
+                    font-size: 1.5rem;
+                    border: none;
+                    background: #050934;
+                    color: orange;
+                   
+                    height: 100%;
+                    padding: 0rem 1rem;
+                    &:hover{
+                        transition: 0.3s ease all;
+                        background: orange;
+                        color: #050934;
+                       
+                    }
+                }
+            }
+            .filter{
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                font-size: 1.5rem;
+                select {
+                    color:  rgb(167, 108, 0);
+                }
+            }
+        }
+        .items {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            .todo-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                padding: 2rem;
+                border-bottom: 2px solid black;
+                transition: all 1s ease;
+                    .item-name {
+                        flex:2;
+                        text-align: center;
+                        font-size: 2.5rem;
+                        font-family: 'Montserrat', sans-serif;
+                        background: linear-gradient(to right bottom, rgba(61, 136, 238,0.7),
+                        rgba(6, 86, 217,0.3));
+                        transition: background-color 1s ease;
+                        &-completed{
+                            
+                            text-decoration: line-through;
+                            background: green;
+                            
+                        }
+                    }
+                    .item-control{
+                        flex:1;
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        height: 100%;
+                        font-size: 2.2rem;
+                        button {
+                            border: none;
+                            background: #050934;
+                            width: 5rem;
+                            transition: all 0.3s ease;
+                            border-radius: 5px;
+                        }
+                        .btn-completed{
+                            color: green;
+                            &:hover{
+                                background: green;
+                                color: #050934;
+                            }
+                        }
+                        .btn-uncompleted{
+                            color: red;
+                            &:hover{
+                                background: red;
+                                color: #050934;
+                            }
+                        }
+                        
+                    }
+            
+            }
+        }
+    }
+}
+
+.removeTodo{
+        transform: translateY(10rem) rotateZ(20deg);
+        opacity: 0;
+}
+
