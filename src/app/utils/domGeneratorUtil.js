@@ -66,8 +66,3 @@ export const showTodoItem = (newTodo) => {
         todoDiv.appendChild(todoControl);
         document.querySelector('.items').appendChild(todoDiv);
 }
-
-const removeTodoFromList = (todo) => {
-    document.querySelector('.items')
-    .removeChild(todo);
-};

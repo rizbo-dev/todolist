@@ -21,7 +21,6 @@ export const run = () => {
     });
     document.querySelector('select')
     .addEventListener('change', () => {
-        console.log('cao');
         document.querySelector('.items').innerHTML = '';
         const filteredTodos = getFilteredTodosFromLocalStorage();
         filteredTodos.map((todo) => {
