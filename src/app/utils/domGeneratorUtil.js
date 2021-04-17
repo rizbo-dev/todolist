@@ -1,7 +1,6 @@
 import { getTodosFromLocalStorage, removeTodoFromLocalStorage } from "./localStorageUtil";
 
 export const showTodoItem = (newTodo) => {
-    console.log(newTodo);
     const todoDiv = document.createElement('div');
         todoDiv.setAttribute('data-id',newTodo.id);
         todoDiv.classList.add('todo-item');

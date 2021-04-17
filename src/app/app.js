@@ -2,6 +2,7 @@ import { ToDoClass } from "./ToDoClass"
 import { showTodoItem } from "./utils/domGeneratorUtil";
 import  {addToLocalStorage, getFilteredTodosFromLocalStorage, getTodosFromLocalStorage} from "./utils/localStorageUtil";
 
+
 export const run = () => {
      window.addEventListener('DOMContentLoaded', () => {
         const allTodos = getTodosFromLocalStorage();
